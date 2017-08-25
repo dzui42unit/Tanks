@@ -27,13 +27,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     bullet.cpp \
-    player.cpp
+    player.cpp \
+    gameloop.cpp \
+    enemy.cpp \
+    score.cpp
 
 HEADERS += \
     bullet.h \
     player.h \
     gameloop.h \
-    enemy.h
+    enemy.h \
+    score.h
 
 RESOURCES += \
     res.qrc

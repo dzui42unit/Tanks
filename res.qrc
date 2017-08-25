@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/sound">
-        <file>3 - Track 3.mp3</file>
         <file>gun-gunshot-01.mp3</file>
     </qresource>
     <qresource prefix="/pics">
@@ -11,17 +10,15 @@
         <file>player_r.png</file>
         <file>player_u.png</file>
         <file>eagle.png</file>
-        <file>bluestone.png</file>
         <file>colorstone.png</file>
         <file>greystone.png</file>
-        <file>purplestone.png</file>
-        <file>wood.png</file>
         <file>shot_d.png</file>
         <file>shot_l.png</file>
         <file>shot_r.png</file>
-        <file>enemy.png</file>
-        <file>enemy_d.png</file>
         <file>enemy_l.png</file>
         <file>enemy_r.png</file>
+        <file>purplestone.png</file>
+        <file>enemy.png</file>
+        <file>enemy_d.png</file>
     </qresource>
 </RCC>

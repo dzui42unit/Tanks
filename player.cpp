@@ -1,6 +1,7 @@
 #include "player.h"
 #include "gameloop.h"
 #include "bullet.h"
+#include "score.h"
 #include <QGraphicsScene>
 #include <QDebug>
 
@@ -10,7 +11,7 @@ Player::Player()
     this->down = 1;
     this->left = 0;
     this->right = 0;
-    this->score = 0;
+    this->bullet_sound = new QMediaPlayer();
     this->bullet_sound = new QMediaPlayer();
     this->bullet_sound->setMedia(QUrl("qrc:/sound/gun-gunshot-01.mp3"));
 }
@@ -84,7 +85,7 @@ void    Player::keyPressEvent(QKeyEvent *event)
         if (this->left)
             direct = 4;
         Bullet *bullet;
-        bullet = new Bullet(direct, this->map, this);
+        bullet = new Bullet(direct, this->map, this, 1);
         if (direct == 1 || direct == 2)
             bullet->setPos(x() + 30, y());
         if (direct == 3)
@@ -186,4 +187,34 @@ void    Player::ft_create_map(int **map)
 int     **Player::ft_player_map()
 {
     return (this->map);
+}
+
+void        Player::ft_set_grid(QGraphicsPixmapItem **grid)
+{
+    this->grid = grid;
+}
+
+QGraphicsPixmapItem **Player::ft_get_grid()
+{
+    return (this->grid);
+}
+
+void    Player::ft_set_enemy(Enemy *e)
+{
+    this->enemy = e;
+}
+
+Enemy   *Player::ft_get_enemy()
+{
+    return (this->enemy);
+}
+
+Score   *Player::ft_get_score()
+{
+    return (this->score);
+}
+
+void    Player::ft_set_score(Score *score)
+{
+    this->score = score;
 }
